@@ -11,5 +11,5 @@ public class ProductRequest {
 
     private String name;
     private double price;
-    private int stock;
+    private int stock = -1;
 }
