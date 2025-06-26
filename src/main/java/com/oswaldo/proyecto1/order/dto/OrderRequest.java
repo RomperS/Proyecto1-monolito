@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 public class OrderRequest {
 
-    private List<Integer> productsId = new ArrayList<>();
+    private List<OrderDetailsRequest> orderDetailsRequests = new ArrayList<>();
     private Integer user;
     private String address;
 }
