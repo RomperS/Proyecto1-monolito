@@ -11,4 +11,5 @@ public class OrderDetailsRequest {
 
     private Integer orderId;
     private Integer productId;
+    private int quantity;
 }
