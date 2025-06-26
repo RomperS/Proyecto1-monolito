@@ -26,4 +26,6 @@ public class OrderDetailsModel {
     @ManyToOne
     @JoinColumn(name = "product_id")
     private ProductModel product;
+
+    private int quantity;
 }
