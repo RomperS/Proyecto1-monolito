@@ -13,4 +13,5 @@ public interface ProductRepository extends JpaRepository<ProductModel, Integer> 
     boolean existsByIdAndStockGreaterThan(Integer productId, int minStock);
     boolean existsByNameAndIdIsNot(String name, Integer productId);
     boolean existByName (String name);
+    double findPriceById(Integer productId);
 }
