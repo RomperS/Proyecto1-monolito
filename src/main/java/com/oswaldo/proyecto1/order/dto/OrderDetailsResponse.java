@@ -13,6 +13,5 @@ public class OrderDetailsResponse {
     private Integer id;
     private Integer orderId;
     private InternalProductDTO product;
-    private double price;
     private int quantity;
 }
