@@ -15,6 +15,5 @@ public class OrderRequest {
 
     private List<Integer> productsId = new ArrayList<>();
     private Integer user;
-    private LocalDateTime date;
     private String address;
 }
