@@ -11,6 +11,5 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends JpaRepository<OrderModel, Integer> {
     List<OrderModel> findByUserId(Integer userId);
-    List<OrderModel> findByTotalPriceBetween(double minPrice, double maxPrice);
     List<OrderModel> findByDateBetween(LocalDateTime minDate, LocalDateTime maxDate);
 }
