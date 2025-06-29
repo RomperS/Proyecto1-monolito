@@ -81,7 +81,7 @@ public class ProductService {
         return productMapper.modelToResponse(productRepository.save(model));
     }
 
-    public void remove(Integer id) {
+    public void delete(Integer id) {
         productRepository.deleteById(id);
     }
 
