@@ -8,6 +8,7 @@ class Proyecto1ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		throw new UnsupportedOperationException("Not yet implemented");
 	}
 
 }
