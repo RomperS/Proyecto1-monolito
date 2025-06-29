@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<UserModel, Integer> {
     List<UserModel> findByUsernameContainingIgnoreCase(String username);
-    Optional<UserModel> findByName(String name);
+    List<UserModel> findByName(String name);
     Boolean existsByUsername(String username);
     Boolean existsByUsernameAndIdIsNot(String username, Integer id);
 }
