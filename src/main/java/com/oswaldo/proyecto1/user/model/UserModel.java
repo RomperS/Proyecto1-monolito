@@ -21,7 +21,7 @@ public class UserModel {
     private Integer id;
 
     private String name;
-    private String userName;
+    private String username;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderModel> orders = new ArrayList<>();
