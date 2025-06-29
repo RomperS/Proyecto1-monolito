@@ -10,7 +10,6 @@ import org.hibernate.Internal;
 @NoArgsConstructor
 public class ProductResponse {
 
-    private Integer id;
     private InternalProductDTO internalProductDTO;
     private int stock;
 }
