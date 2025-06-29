@@ -1,7 +1,6 @@
 package com.oswaldo.proyecto1.user.model;
 
-import com.oswaldo.proyecto1.order.model.OrderModel;
-import com.oswaldo.proyecto1.product.model.ProductModel;
+import com.oswaldo.proyecto1.order.model.Order;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
-public class UserModel {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +23,6 @@ public class UserModel {
     private String username;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<OrderModel> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
 }

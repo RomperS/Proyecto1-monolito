@@ -1,6 +1,6 @@
 package com.oswaldo.proyecto1.order.model;
 
-import com.oswaldo.proyecto1.product.model.ProductModel;
+import com.oswaldo.proyecto1.product.model.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "orders_details")
-public class OrderDetailsModel {
+public class OrderDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,11 +21,11 @@ public class OrderDetailsModel {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
-    private OrderModel order;
+    private Order order;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    private ProductModel product;
+    private Product product;
 
     private int quantity;
 }

@@ -1,6 +1,5 @@
 package com.oswaldo.proyecto1.order.dto;
 
-import com.oswaldo.proyecto1.user.model.UserModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

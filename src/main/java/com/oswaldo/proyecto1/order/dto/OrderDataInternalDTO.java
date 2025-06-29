@@ -1,6 +1,6 @@
 package com.oswaldo.proyecto1.order.dto;
 
-import com.oswaldo.proyecto1.order.model.OrderDetailsModel;
+import com.oswaldo.proyecto1.order.model.OrderDetails;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,5 +13,5 @@ import java.util.List;
 public class OrderDataInternalDTO {
 
     private double totalPrice;
-    private List<OrderDetailsModel>  orderDetails;
+    private List<OrderDetails>  orderDetails;
 }
