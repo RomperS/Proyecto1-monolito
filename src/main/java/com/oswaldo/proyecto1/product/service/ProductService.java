@@ -3,6 +3,7 @@ package com.oswaldo.proyecto1.product.service;
 import com.oswaldo.proyecto1.exception.ProductNameAlreadyUsedException;
 import com.oswaldo.proyecto1.exception.ProductNotFoundException;
 import com.oswaldo.proyecto1.mapper.ProductMapper;
+import com.oswaldo.proyecto1.product.dto.PriceRangeDTO;
 import com.oswaldo.proyecto1.product.dto.ProductRequest;
 import com.oswaldo.proyecto1.product.dto.ProductResponse;
 import com.oswaldo.proyecto1.product.model.Product;
@@ -33,8 +34,8 @@ public class ProductService {
         return productMapper.modelsToResponses(productRepository.findByNameContainingIgnoreCase(name));
     }
 
-    public List<ProductResponse> findByPrice(double minPrice, double maxPrice) {
-        return productMapper.modelsToResponses(productRepository.findByPriceBetween(minPrice, maxPrice));
+    public List<ProductResponse> findByPrice(PriceRangeDTO price) {
+        return productMapper.modelsToResponses(productRepository.findByPriceBetween(price.getMinPrice(), price.getMaxPrice()));
     }
 
     @Transactional
