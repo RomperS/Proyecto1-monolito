@@ -10,8 +10,5 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<ProductModel, Integer> {
     List<ProductModel> findByNameContainingIgnoreCase(String name);
     List<ProductModel> findByPriceBetween(double minPrice, double maxPrice);
-    boolean existsByIdAndStockGreaterThan(Integer productId, int minStock);
     boolean existsByNameAndIdIsNot(String name, Integer productId);
-    boolean existByName (String name);
-    double findPriceById(Integer productId);
 }
