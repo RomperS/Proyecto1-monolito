@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @AllArgsConstructor
@@ -12,6 +13,6 @@ import java.util.List;
 @Data
 public class OrderDataInternalDTO {
 
-    private double totalPrice;
+    private BigDecimal totalPrice;
     private List<OrderDetails>  orderDetails;
 }

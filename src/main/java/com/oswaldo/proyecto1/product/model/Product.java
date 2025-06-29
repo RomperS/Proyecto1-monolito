@@ -4,6 +4,8 @@ package com.oswaldo.proyecto1.product.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Setter
 @Getter
@@ -17,6 +19,6 @@ public class Product {
     private Integer id;
 
     private String name;
-    private double price;
+    private BigDecimal price;
     private int stock;
 }

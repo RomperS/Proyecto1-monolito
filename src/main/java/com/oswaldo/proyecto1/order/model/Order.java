@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class Order {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private double totalPrice;
+    private BigDecimal totalPrice;
 
     private LocalDateTime date;
 
